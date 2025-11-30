@@ -209,6 +209,8 @@ filter(fn, lst)      # Keep elements where fn returns True
 any(lst)             # True if any element is True
 all(lst)             # True if all elements are True
 
+del lst[idx] # Delete idx element. Can be used for dictionary(e.g., del dic[key])
+
 # Binary Search (import bisect)
 bisect.bisect(lst, x)     # Find insertion point
 bisect.bisect_left(lst, x)# Find leftmost insertion point
