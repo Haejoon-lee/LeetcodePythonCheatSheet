@@ -18,6 +18,8 @@ A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly us
   - [Tuples](#tuples)
   - [Strings](#strings)
 - [Built-in Functions](#built-in-functions)
+- [Useful Modules](#useful-modules)
+  - [Random](#random)
 - [Advanced Topics](#advanced-topics)
 - [Best Practices](#best-practices)
 - [Tips & Gotchas](#tips--gotchas)
@@ -227,6 +229,28 @@ set([1,2,2])         # List to set
 abs(-5)              # Absolute value
 pow(2, 3)            # Power
 round(3.14159, 2)    # Round to decimals
+```
+
+# Useful Modules
+
+## Random
+```python
+import random
+
+# Selection
+random.choice([1, 2, 3, 4])      # Random element from sequence
+random.choices([1, 2, 3], k=2)   # k random elements (with replacement)
+random.sample([1, 2, 3], k=2)    # k unique random elements (without replacement)
+
+# Random Numbers
+random.randint(1, 10)             # Random integer in [1, 10] (inclusive)
+random.randrange(1, 10)          # Random integer in [1, 10) (exclusive end)
+random.random()                   # Random float in [0.0, 1.0)
+random.uniform(1.0, 10.0)        # Random float in [1.0, 10.0]
+
+# Shuffling
+nums = [1, 2, 3, 4]
+random.shuffle(nums)             # Shuffle list in-place
 ```
 
 # Advanced Topics
