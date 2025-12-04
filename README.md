@@ -57,6 +57,12 @@ nums[-1]    # Last item
 nums[::-1]  # Reverse list
 nums[1:]    # Everything after index 1
 nums[:3]    # First three elements
+
+# Check if element is in list
+if element in nums:
+    print("Element is in list")
+else:
+    print("Element is not in list")
 ```
 
 ## Dictionary
