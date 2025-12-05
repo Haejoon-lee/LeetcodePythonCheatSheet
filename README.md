@@ -73,6 +73,7 @@ Time Complexities:
 d = {'a':1, 'b':2}
 
 # Essential Operations
+d['key'] = value         # Add/update key-value pair
 d.get('key', default)     # Safe access with default
 d.setdefault('key', 0)    # Set if missing
 d.items()                 # Key-value pairs
@@ -81,9 +82,15 @@ d.values()               # Just values
 d.pop(key)              # Remove and return value
 d.update({key: value})  # Batch update
 
+
 # Advanced Usage
 from collections import defaultdict
 d = defaultdict(list)     # Auto-initialize missing keys
+d = defaultdict(list)       # Auto-initialize missing keys as empty lists
+d['key'].append(1)          # No need to check if key exists
+d['key'].append(2)
+# Result: {'key': [1, 2, 3]}
+
 d = defaultdict(int)      # Useful for counting
 ```
 
@@ -277,6 +284,10 @@ def compare(item1, item2):
 
 # Sort using custom comparison
 sorted_list = sorted(items, key=cmp_to_key(compare))
+
+# Default sorted() behavior
+sorted([3, 1, 2])              # [1, 2, 3] - Ascending (default)
+sorted([3, 1, 2], reverse=True) # [3, 2, 1] - Descending
 ```
 
 ## Taking Multiple Inputs
